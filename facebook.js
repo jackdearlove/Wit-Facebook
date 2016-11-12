@@ -26,13 +26,7 @@ const fbMessage = (recipientId, msg, cb) => {
       },
       message: {
         text: msg,
-        quick_replies:[
-      {
-        "content_type":"text",
-        "title":x,
-        "payload":"empty"
-      },
-    ]
+        response.quickreplies.map(x => {"title": x, "content_type": "text", "payload": "empty"});
       },
     },
   };
